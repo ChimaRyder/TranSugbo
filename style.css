@@ -408,4 +408,54 @@ select::-webkit-scrollbar-thumb {
     height: 500px;
     width: 100%;
     background-color: #a10e15;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.passes_header .title, .passes_header .title_description {
+    color: white;
+}
+
+.passes_section {
+    display: flex;
+    justify-content: center;
+}
+
+.passes_tabs {
+    width: 40vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: #d9d9d9;
+    -webkit-border-radius: 20px;
+    border-radius: 25px;
+    list-style-type: none;
+    padding: 4px;
+}
+
+.passes_tabs li {
+    padding: 5px;
+    z-index: 1;
+}
+
+.passes_tabs li a{
+    font-size: 15px;
+    color: rgba(30, 30, 30, 0.5);
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.passes_tab {
+    position: relative;
+}
+
+.indicator {
+    position: absolute;
+    top: 0;
+    background-color:#faa41e;
+    width: 33%;
+    height: 100%;
+    z-index: 0;
+    -webkit-border-radius: 25px;
+    border-radius: 25px;
 }

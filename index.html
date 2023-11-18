@@ -17,7 +17,7 @@
                     <li><a href="#">About</a></li>
                 </ul>    
             </nav>
-            <a class="user" href="#"><img src="images/profile-user.png"></a>
+            <a class="user" href="#"><img src="images/profile-user.svg"></a>
         </header>
 
         <div class="home_searchbar">
@@ -220,15 +220,61 @@
             </div>
 
             <div class="passes_section">
-                <div class="passes_tab">
-                    <ul class="passes_tabs">
-                        <li><a href="#">KASAG PASS</a></li>
-                        <li><a href="#">KUGITA PASS</a></li>
-                        <li><a href="#">TUYOM PASS</a></li>
+                <div class="passes_description kasag" style="display: block;">
+                    <img src="images/kasag.svg">
+                    <div class="passes_details">
+                        <div class="passes_title">KASAG PASS</div>
+                        <ul class="passes_list">
+                            <li><span>Sed ut perspiciatis unde omnis iste natus error sit</span></li>
+                            <li><span>Nemo enim ipsam voluptatem quia voluptas sit aspernatur</span></li>
+                            <li><span>Neque porro quisquam est, qui dolorem ipsum quia dolor sit</span></li>
+                        </ul>
+
+                        <button class="passes_buynow_button">Book now</button>
+                    </div>
+                </div>
+
+                <div class="passes_description kugita">
+                    <img src="images/octopus.svg">
+                    <div class="passes_details">
+                        <div class="passes_title">KUGITA PASS</div>
+                        <ul class="passes_list">
+                            <li><span>Sed ut perspiciatis unde omnis iste natus error sit</span></li>
+                            <li><span>Nemo enim ipsam voluptatem quia voluptas sit aspernatur</span></li>
+                            <li><span>Neque porro quisquam est, qui dolorem ipsum quia dolor sit</span></li>
+                        </ul>
+
+                        <button class="passes_buynow_button">Book now</button>
+                    </div>
+                </div>
+
+                <div class="passes_description tuyom">
+                    <img src="images/sea-urchin.svg">
+                    <div class="passes_details">
+                        <div class="passes_title">TUYOM PASS</div>
+                        <ul class="passes_list">
+                            <li><span>Sed ut perspiciatis unde omnis iste natus error sit</span></li>
+                            <li><span>Nemo enim ipsam voluptatem quia voluptas sit aspernatur</span></li>
+                            <li><span>Neque porro quisquam est, qui dolorem ipsum quia dolor sit</span></li>
+                        </ul>
+
+                        <button class="passes_buynow_button">Book now</button>
+                    </div>
+                </div>
+
+                <div class="passes_tab" id="passes_container">
+                    <ul class="passes_tabs" id="passes_list">
+                        <li onclick="moveTab(this.firstChild)"><a class="tab" id = "one" href="#kasag" style="color: white;">KASAG PASS</a></li>
+                        <li onclick="moveTab(this.firstChild)"><a class="tab" id = "two" href="#kugita">KUGITA PASS</a></li>
+                        <li onclick="moveTab(this.firstChild)"><a class="tab" id = "three" href="#tuyom">TUYOM PASS</a></li>
                     </ul>
-                    <div class="indicator"></div>
+                    <div class="indicator" id="indicator"></div>
                 </div>
             </div>
+        </div>
+
+        <div class="news_stories">
+
         </div>
     </body>
 </html>

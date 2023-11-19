@@ -185,12 +185,12 @@ header {
 }
 
 select::-webkit-scrollbar {
-    width: 10px;
+    width: 15px;
   }
   
   
 select::-webkit-scrollbar-thumb {
-    background: #faa41e;
+    background: rgba(78, 78, 78, 0.3);
     -webkit-border-radius: 15px 15px 15px 15px;
     border-radius: 15px 15px 15px 15px;
   }

@@ -185,7 +185,7 @@ header {
     outline: none;
 }
 
-.searchbar button, .guide_button, .guides_seemore_button, .passes_buynow_button {
+.searchbar button, .guide_button, .guides_seemore_button, .passes_buynow_button, .email_form button {
     height: 50px;
     width: 190px;
     background-color: #faa41e;
@@ -201,7 +201,7 @@ header {
     margin: 0;
 }
 
-.searchbar button:hover, .guide_button:hover, .guides_seemore_button:hover, .passes_buynow_button:hover{
+.searchbar button:hover, .guide_button:hover, .guides_seemore_button:hover, .passes_buynow_button:hover, .email_form button:hover{
     -webkit-box-shadow: 2px 11px 9px 0px rgba(0,0,0,0.14); 
     box-shadow: 2px 11px 9px 0px rgba(0,0,0,0.14);
 }
@@ -660,4 +660,51 @@ select::-webkit-scrollbar-thumb {
     font-family: "Nunito", sans-serif;
     font-size: 15px;
     padding-top: 10px;
+}
+
+.newsletter {
+    background-color: #d9d9d9;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.newsletter_container {
+    margin: 0 10%;
+}
+
+.newsletter_container .title {
+    font-size: 25px;
+    margin: 0;
+}
+
+.newsletter-subtext {
+    font-family: "Nunito", sans-serif;
+    color:rgba(78, 78, 78, 0.75);
+    letter-spacing: 1px;
+    font-size: 15;
+}
+
+.newsletter_header {
+    padding-bottom: 20px;
+}
+
+.email_form {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.email_form input {
+    width: 0;
+    min-width: 80%;
+    background-color: #d9d9d9;
+    border: 2px solid #a10e15;
+    letter-spacing: 2px;
+}
+
+.email_form button {
+    margin: 0;
+    width: 220px;
+    background-color: #a10e15;
+    letter-spacing: 2px;
 }

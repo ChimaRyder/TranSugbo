@@ -104,8 +104,8 @@ header {
 
 .about_guides {
     background-color: white;
-    padding-bottom: 3%;
-    padding-top: 2%;
+    padding-bottom: 5%;
+    padding-top: 5%;
     z-index: 0;
 }
 
@@ -197,9 +197,11 @@ select::-webkit-scrollbar-thumb {
 
 .about {
     display: flex;
+    max-height: 800px;
     flex-direction: row;
     justify-content: center;
-    padding: 75px 10%;
+    padding: 0 10%;
+    flex-wrap: wrap;
 }
 
 .about_photo {
@@ -213,19 +215,21 @@ select::-webkit-scrollbar-thumb {
     -webkit-border-radius: 15px;
     border-radius: 15px;
     float: left;
+    margin-bottom: 20px;
 }
 
 .about_article {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     margin-left: 30px;
+    width: 700px;
 }
 
 .about_headline {
     color: #faa41e;
-    font-size: 40px;
+    font-size: 38px;
     font-weight: 700;
+    text-align: justify;
 }
 
 .about_paragraph {
@@ -240,6 +244,10 @@ select::-webkit-scrollbar-thumb {
     line-height: 250%;
     padding-top: 4%;
     text-indent: 50px;
+}
+
+.about_curve {
+    padding: 2% 0;
 }
 
 .title {
@@ -606,7 +614,7 @@ select::-webkit-scrollbar-thumb {
     margin: 10px 10%;
     justify-content: space-around;
     flex-wrap: wrap;
-    max-height: 250px;
+    max-height: 230px;
     overflow: hidden;
 }
 

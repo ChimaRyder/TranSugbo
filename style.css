@@ -87,12 +87,12 @@ header {
 }
 
 .home_center_container {
-    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     gap: 10%;
+    margin: 0 10%;
 }
 
 .home_searchbar img {
@@ -118,22 +118,26 @@ header {
     z-index: 0;
 }
 
-.home_searchbar .searchbar_container {
+.home_searchbar .searchbar {
     display: flex;
+    justify-content: center;
+}
+
+.searchbar {
+    display: flex;
+    flex-direction: row;
     justify-content: space-around;
-    text-align: center;
-    bottom: 10%;
+    gap: 30px;
     background-color: rgba(217,217,217,0.5);
     -webkit-border-radius: 15px;
     border-radius: 15px;
-    margin: 0 10%;
+    padding: 30px;
 }
 
-.home_searchbar .searchbar_container select, input {
+.home_searchbar .searchbar select, input {
     height: 50px;
     width: 210px;
     color: #4e4e4e;
-    margin: 30px;
     padding-left: 20px;
     -webkit-border-radius: 15px;
     border-radius: 15px;
@@ -141,17 +145,22 @@ header {
     cursor: pointer;
 }
 
-.searchbar_container input {
+.searchbar input {
     width: 230px;
 }
 
-.home_searchbar .searchbar_container select {
+.home_searchbar .searchbar select {
     background-color: white;
 }
 
 .to_from {
     float: left;
     display: flex;
+}
+
+.date_submit {
+    display: flex;
+    gap: 30px;
 }
 
 #from_municipality {
@@ -172,11 +181,11 @@ header {
     appearance: none;
 }
 
-.home_searchbar .searchbar_container select, input:focus {
+.home_searchbar .searchbar select, input:focus {
     outline: none;
 }
 
-.searchbar_container button, .guide_button, .guides_seemore_button, .passes_buynow_button {
+.searchbar button, .guide_button, .guides_seemore_button, .passes_buynow_button {
     height: 50px;
     width: 190px;
     background-color: #faa41e;
@@ -188,7 +197,11 @@ header {
     cursor: pointer;
 }
 
-.searchbar_container button:hover, .guide_button:hover, .guides_seemore_button:hover, .passes_buynow_button:hover{
+.searchbar button {
+    margin: 0;
+}
+
+.searchbar button:hover, .guide_button:hover, .guides_seemore_button:hover, .passes_buynow_button:hover{
     -webkit-box-shadow: 2px 11px 9px 0px rgba(0,0,0,0.14); 
     box-shadow: 2px 11px 9px 0px rgba(0,0,0,0.14);
 }

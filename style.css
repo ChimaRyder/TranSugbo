@@ -708,3 +708,157 @@ select::-webkit-scrollbar-thumb {
     background-color: #a10e15;
     letter-spacing: 2px;
 }
+
+.footer {
+    background-color: #a10e15;
+    padding: 20px 10%;
+}
+
+.whole-footer-container {
+    display: flex;
+    justify-content:space-between;
+    flex-wrap: wrap;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.footer-row {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+}
+
+.footer-col {
+}
+
+.footer-col * {
+    font-size: 18px;
+}
+
+.footer-col-title, .socmed-title {
+    font-size: 20px;
+    font-family: "Nunito", sans-serif;
+    color:#faa41e;
+    margin-bottom: 8px;
+}
+
+.footer-col ul {
+    list-style: none;
+}
+
+.footer-col li {
+    padding: 8px 0;
+}
+
+.footer-col li a {
+    transition: all 0.1s ease;
+}
+
+.footer-col li a:hover {
+    color:#faa41e;
+}
+
+.socmed {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.socmed-title {
+    font-weight: 100;
+    letter-spacing: 1px;
+    font-size: 14px;
+}
+
+.socmed-links {
+    display: flex;
+    gap: 10px;
+}
+
+.socmed-links img {
+    height: 30px;
+    filter: invert(100%) sepia(7%) saturate(28%) hue-rotate(284deg) brightness(107%) contrast(107%);
+    transition: all 0.1s ease;
+}
+
+.socmed-links img:hover {
+    filter: invert(73%) sepia(37%) saturate(2590%) hue-rotate(342deg) brightness(102%) contrast(103%);
+}
+
+.horizontal-line {
+    height: 280px;
+    width: 3px;
+    background-color: #faa41e;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+}
+
+.line-container {
+    margin: 0 30px;
+}
+
+.partners-app {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 400px;
+}
+
+.partners {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+}
+
+.partners-title, .app-title {
+    font-weight: 100;
+    letter-spacing: 1px;
+    font-size: 10px;
+    font-family: "Nunito", sans-serif;
+    color:white;
+    margin-bottom: 10px;
+}
+
+.partners img {
+    filter: invert(100%) sepia(7%) saturate(28%) hue-rotate(284deg) brightness(107%) contrast(107%);
+    height: 27px;
+}
+
+#mastercard, #amex, #jcb {
+    height: 75px;
+}
+
+.googleplay-applestore {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+#google {
+    height:40px;
+}
+
+.footer hr {
+    background-color:#faa41e;
+    height:2px;
+    border: none;
+    margin: 20px 0;
+}
+
+.terms-list {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.terms-list li, .terms-list li a{
+    font-size: 12px;
+}

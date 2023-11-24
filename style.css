@@ -727,6 +727,15 @@ select::-webkit-scrollbar-thumb {
     flex-wrap: wrap;
 }
 
+@media (max-width: 1024px) {
+    .footer-row {
+        width: 100%;
+        justify-content: space-between;
+        border-bottom: 2px solid #faa41e;
+        padding-bottom: 20px;
+    }
+}
+
 .footer-col * {
     font-size: 18px;
 }
@@ -806,6 +815,8 @@ select::-webkit-scrollbar-thumb {
     flex-direction: row;
     flex-wrap: wrap;
     gap: 30px;
+    width: 100%;
+    justify-content: space-between;
 }
 
 @media (min-width: 1024px) {

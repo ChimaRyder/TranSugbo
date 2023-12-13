@@ -6,7 +6,7 @@
     padding: 0;  
 }
 
-li, a, button, .home_text, select, input, .about_headline, .title, .title_description, .guide_name, .passes_title {
+li, a, button, .home_text, select, input, .about_headline, .title, .title_description, .guide_name, .passes_title, .SignInTitle, .loginform label {
     font-family: "Nunito", sans-serif;
     font-weight: 500;
     font-size: 20px;
@@ -36,6 +36,8 @@ header {
     height: 50px;
     filter: invert(100%) sepia(7%) saturate(28%) hue-rotate(284deg) brightness(107%) contrast(107%);
     transition:  0.3s ease;
+    cursor: pointer;
+    
 }
 
 .user img:hover {
@@ -76,6 +78,35 @@ header {
 .nav_links li a:hover:after {
     transform: scale(1, 1);
     width: 100%;
+}
+
+.loginform {
+    position: absolute;
+    margin-top: 10px;
+    padding: 10px;
+    right: 200px;
+    width: 300px;
+    background-color: white;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    display: none;
+}
+
+.SignInTitle {
+    color: #a10e15;
+}
+
+.loginform input {
+    border: 1px solid #4e4e4e;
+}
+
+.loginform label {
+    color: #4e4e4e;
+    font-size: 14px;
 }
 
 .home_searchbar {
@@ -185,7 +216,7 @@ header {
     outline: none;
 }
 
-.searchbar button, .guide_button, .guides_seemore_button, .passes_buynow_button, .email_form button {
+.searchbar button, .guide_button, .guides_seemore_button, .passes_buynow_button, .email_form button, .loginform button {
     height: 50px;
     width: 190px;
     background-color: #faa41e;

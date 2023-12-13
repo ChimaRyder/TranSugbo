@@ -18,7 +18,17 @@
                     <li><a href="#">About</a></li>
                 </ul>    
             </nav>
-            <a class="user" href="#"><img src="images/profile-user.svg"></a>
+            <div class="userLogIn">
+                <a class="user" onclick="c"><img src="images/profile-user.svg"></a>
+                <form class="loginform">
+                    <h2 class="SignInTitle">Sign In</h2>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Email">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Password">
+                    <button type="submit">Log In</button>
+                </form>
+            </div>
         </header>
 
         <div class="home_searchbar">

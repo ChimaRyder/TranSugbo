@@ -27,3 +27,7 @@ function moveTab(element) {
         indicator.setAttribute("style", "translate: 203% 0");
     }
 }
+
+// displayLogin() {
+
+// }

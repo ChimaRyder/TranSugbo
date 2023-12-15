@@ -28,6 +28,25 @@ function moveTab(element) {
     }
 }
 
-// displayLogin() {
+function displayLogin() {
+    form = document.getElementById("loginform");
+    
+    if (form.style.display == "flex") {
+        form.style.display = "none";
+    } else {
+        form.style.display = "flex";
+    }
+}
 
-// }
+function viewhide() {
+    password = document.getElementById("password");
+    eye = document.getElementById("eye");
+
+    if (password.type == "text") {
+        password.type = "password";
+        eye.src = "images/hidden.svg";
+    } else {
+        password.type = "text";
+        eye.src = "images/view.svg";
+    }
+}

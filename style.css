@@ -6,7 +6,7 @@
     padding: 0;  
 }
 
-li, a, button, .home_text, select, input, .about_headline, .title, .title_description, .guide_name, .passes_title, .SignInTitle, .loginform label {
+li, a, button, .home_text, select, input, .about_headline, .title, .title_description, .guide_name, .passes_title, .loginform label, .login_box h2, .login_box p {
     font-family: "Nunito", sans-serif;
     font-weight: 500;
     font-size: 20px;
@@ -78,35 +78,6 @@ header {
 .nav_links li a:hover:after {
     transform: scale(1, 1);
     width: 100%;
-}
-
-.loginform {
-    position: absolute;
-    margin-top: 10px;
-    padding: 10px;
-    right: 200px;
-    width: 300px;
-    background-color: white;
-    border-radius: 15px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 10px;
-    display: none;
-}
-
-.SignInTitle {
-    color: #a10e15;
-}
-
-.loginform input {
-    border: 1px solid #4e4e4e;
-}
-
-.loginform label {
-    color: #4e4e4e;
-    font-size: 14px;
 }
 
 .home_searchbar {
@@ -232,7 +203,12 @@ header {
     margin: 0;
 }
 
-.searchbar button:hover, .guide_button:hover, .guides_seemore_button:hover, .passes_buynow_button:hover, .email_form button:hover{
+.loginform button {
+    width: 80%;
+    height: 40px;
+}
+
+.searchbar button:hover, .guide_button:hover, .guides_seemore_button:hover, .passes_buynow_button:hover, .email_form button:hover, .loginform button:hover{
     -webkit-box-shadow: 2px 11px 9px 0px rgba(0,0,0,0.14); 
     box-shadow: 2px 11px 9px 0px rgba(0,0,0,0.14);
 }
@@ -908,4 +884,86 @@ select::-webkit-scrollbar-thumb {
 .terms-list li, .terms-list li a{
     font-size: 12px;
     transition: all 0.1s ease;
+}
+
+.loginPage {
+    background-image: url(./images/login_background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: -100px;
+    display: flex;
+    justify-content: center;
+}
+
+.login_box {
+    background-color: rgba(161,14,21,0.9);
+    width: 400px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 3%;
+    gap: 20px;
+}
+
+.login_box hr {
+    width: 100%;
+    border: 1px solid #faa41e;
+}
+
+.login_box h2 {
+    font-size: 25px;
+    letter-spacing: 1px;
+}
+
+.loginform {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 5px;
+}
+
+.loginform label {
+    font-size: 15px;
+}
+
+.loginform input, .loginform button {
+    width: 100%;
+    align-self: center;
+    border-radius: 10px;
+}
+
+.loginform input {
+    margin-top: 5px;
+    margin-bottom: 20px;
+    height: 40px;
+    font-size: 15px;
+    cursor: text;
+}
+
+.login_box a {
+    font-size: 15px;
+    color:#faa41e;
+    cursor: pointer;
+}
+
+.login_box a:hover {
+    text-decoration: underline;
+}
+
+.login_box p {
+    font-size: 15px;
+}
+
+.password {
+    position: relative;
+}
+
+.password img {
+    height: 25px;
+    position: absolute;
+    right: 10px;
+    top: 12px;
+    filter: invert(73%) sepia(37%) saturate(2590%) hue-rotate(342deg) brightness(102%) contrast(103%);
+    cursor: pointer;
 }

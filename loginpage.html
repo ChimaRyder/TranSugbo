@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>Sign In | TranSugbo</title>
+        <link rel="icon" type="image/x-icon" href="images/TranSugbo_Icon.svg">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script type = "text/javascript" src="main.js"></script>
+    </head>
+    <body class="loginPage">
+        <div class="login_box">
+            <h2>Sign In</h2>
+            <hr>
+
+            <form class="loginform" id="loginform" action="index.html">
+                <label for="email">Email</label>
+                <input type="email" name="email">
+                <label for="password">Password</label>
+                <div class="password">
+                    <input type="password" name="password" id="password">
+                    <img class="eye" id="eye" onclick="viewhide();" src="images/hidden.svg">
+                </div>
+                <a href="#">Forgot your password?</a>
+                <button type="submit">Login</button>
+            </form>   
+            
+            <hr>
+
+            <p>Don't have an account? <a>Register</a></p>
+        </div>
+    </body>
+</html>

@@ -227,8 +227,6 @@ function swap() {
     a = from.value;
     b = to.value;
 
-    console.log(a + b + validInput);
-
     if (validInput == 2) {
         from.value = b;
         to.value = a;

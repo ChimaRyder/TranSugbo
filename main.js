@@ -232,3 +232,21 @@ function swap() {
         to.value = a;
     }
 }
+
+function moveslider(checkbox) {
+    one = document.getElementById("firstbutton");
+    two = document.getElementById("secondbutton");
+    three = document.getElementById("thirdbutton");
+    four = document.getElementById("fourthbutton");
+    slider = document.getElementById("photoslider");
+
+    if (checkbox == one) {
+        slider.style.left = "0px";
+    } else if (checkbox == two) {
+        slider.style.left = "-515px";
+    } else if (checkbox == three) {
+        slider.style.left = "-1009px";
+    } else if (checkbox == four) {
+        slider.style.left = "-1530px";
+    }
+}

@@ -314,8 +314,9 @@ input::placeholder {
 .about_photo {
     height: 400px;
     width: 400px;
-    overflow-y: hidden;
-    background-image: url(./images/about_photo.jpg);
+    overflow: hidden;
+    /* background-image: url(./images/about_photo.jpg); */
+    background-color: #4e4e4e;
     background-size: cover;
     background-position: 0px -100px;
     background-repeat: no-repeat;
@@ -324,6 +325,74 @@ input::placeholder {
     float: left;
     margin-bottom: 20px;
     margin-right: 30px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.photoslider {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+    left: 0px;
+}
+
+.secondphoto, .fourthphoto {
+    height: 400px;
+}
+
+.firstphoto{
+    height: 700px;
+    
+}
+
+.thirdphoto {
+    height: 600px;
+}
+
+.photo_nav {
+    position:absolute;
+    display: flex;
+    gap: 5px;
+    bottom: 10px;
+    left: 170px;
+}
+
+.photo_nav input {
+    height: 10px;
+    width: 10px;
+    display: none;
+}
+
+.photo_nav label {
+    height: 10px;
+    width: 10px;
+    background-color: #d9d9d9;
+    border-radius: 20px;
+    opacity: 0.4;
+    cursor:pointer;
+    transition: all 0.3s ease;
+}
+
+.photo_nav label:hover {
+    opacity: 1;
+}
+
+#firstbutton:checked ~ label[for="firstbutton"] {
+    background-color: #faa41e;
+}
+
+#secondbutton:checked ~ label[for="secondbutton"] {
+    background-color: #faa41e;
+}
+
+#thirdbutton:checked ~ label[for="thirdbutton"] {
+    background-color: #faa41e;
+}
+
+#fourthbutton:checked ~ label[for="fourthbutton"] {
+    background-color: #faa41e;
 }
 
 .about_article {

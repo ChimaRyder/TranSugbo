@@ -51,7 +51,25 @@
 
         <div class = "about_guides">
             <div class = "about">
-                <div class="about_photo"></div>
+                <div class="about_photo">
+                    <div class="photoslider" id="photoslider">
+                        <img src="images/about_photo.jpg" class="firstphoto">
+                        <img src="images/about_background_2.jpg" class="secondphoto">
+                        <img src="images/about_background_3.jpg" class="thirdphoto">
+                        <img src="images/about_background_4.jpg" class="fourthphoto">
+                    </div>
+                    <div class="photo_nav">
+                        <input type="radio" id="firstbutton" name="photonav" onclick="moveslider(this)" checked>
+                        <input type="radio" id="secondbutton" name="photonav" onclick="moveslider(this)">
+                        <input type="radio" id="thirdbutton" name="photonav" onclick="moveslider(this)">
+                        <input type="radio" id="fourthbutton" name="photonav" onclick="moveslider(this)">
+                        
+                        <label for="firstbutton"></label>
+                        <label for="secondbutton"></label>
+                        <label for="thirdbutton"></label>
+                        <label for="fourthbutton"></label>
+                    </div>
+                </div>
 
                 <div class="about_article">
                     <h1 class="about_headline">Lorem ipsum dolor sit amet, consectetur adipiscing</h1>

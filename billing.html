@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>Book a Ticket | TranSugbo</title>
+        <title>Book a Ticket</title>
         <link rel="icon" type="image/x-icon" href="images/TranSugbo_Icon.svg">
         <link rel="stylesheet" type="text/css" href="style.css">
         <script type = "text/javascript" src="main.js"></script>
@@ -479,9 +479,86 @@
                             </div>
                         </form>
                     </div>
+                    <div class="payment">
+                        <h3>Payment Details</h3>
+                        <form class="payment_details">
+                            <label for="payment_mode" id="payment_mode">Mode of Payment</label>
+                            <select name="payment_mode" class="two-column" required>
+                                <option value="visa">Visa</option>
+                                <option value="mastercard">MasterCard</option>
+                                <option value="paypal">PayPal</option>
+                                <option value="amex">American Express</option>
+                                <option value="jcb">JCB</option>
+                                <option value="gcash">Gcash</option>
+                                <option value="maya">Maya</option>
+                            </select>
+                            <input required type="text" name="fname" placeholder="First Name">
+                            <input required type="text" name="lname" placeholder="Last Name">
+                            <input required type="tel" name="ccn" placeholder="XXXX XXXX XXXX XXXX" maxlength="19" inputmode="numeric" pattern="[0-9\s]{13,19}">
+                            <div id="exp">
+                                <select name="exp-mm" id="exp-mm" required>
+                                    <option disabled selected>mm</option>
+                                    <option>01</option>
+                                    <option>02</option>
+                                    <option>03</option>
+                                    <option>04</option>
+                                    <option>05</option>
+                                    <option>06</option>
+                                    <option>07</option>
+                                    <option>08</option>
+                                    <option>09</option>
+                                    <option>10</option>
+                                    <option>11</option>
+                                    <option>12</option>
+                                </select>
+                                <span>/</span>
+                                <select name="exp-yyyy" id="exp-yyyy" required>
+                                    <option disabled selected>yyyy</option>
+                                    <option>2023</option>
+                                    <option>2024</option>
+                                    <option>2025</option>
+                                    <option>2026</option>
+                                    <option>2027</option>
+                                    <option>2028</option>
+                                    <option>2029</option>
+                                    <option>2030</option>
+                                    <option>2031</option>
+                                </select>
+                                <input name="cvv" placeholder="CVV" maxlength="4" inputmode="numeric">
+                            </div>
+
+                        </form>
+                    </div>
                 </div>
                 <div class="payment-method">
+                    <h4>Transaction Details</h4>
+
+                    <hr>
+
+                    <div class="travel_details">
+                        <h5>Departure</h5>
+                        <h5>Arrival</h5>
+                        <h5 id="billing_from">Cebu City</h5>
+                        <h5 id="billing_to">Naga City</h5>
+                    </div>
+                    <hr>
+                    <div class="travel_details">
+
+                        <h5 id="payment_title">Adult</h5>
+                        <h5 id="adult_counter">x1</h5>
+                        <h5 id="payment_title">Children</h5>
+                        <h5 id="children_counter">x1</h5>
+                        <label for="mode" id="mode_label">Mode</label>
+                        <select name="mode" id="billing_mode" required>
+                            <option value="train">Train</option>
+                            <option value="bus">Bus</option>
+                        </select>
+                    </div>
+
+                    <hr>
                     
+                    <h4 class="total">Total: P500</h4>
+
                 </div>
             </div>
 
@@ -492,9 +569,10 @@
                             <div class="footer-col">
                                 <div class="footer-col-title">Book</div>
                                 <ul class="footer-list">
+                                    <li><a href="bookingpage.html">Book A Seat</a></li>
                                     <li><a href="#">Manage Booking</a></li>
-                                    <li><a href="#">Seat Sale</a></li>
                                     <li><a href="#">Passenger Account </br>Registration</a></li>
+                                    <li><a href="#">Seat Sale</a></li>
                                     <li><a href="#">Bus Status</a></li>
                                 </ul>
                             </div>

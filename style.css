@@ -213,6 +213,7 @@ input::placeholder {
     display: none;
     overflow-y: scroll;
     max-height: 400px;
+    z-index: 1;
 }
 
 .cities_municipalities_results::-webkit-scrollbar {
@@ -1065,7 +1066,7 @@ input::placeholder {
     }
 }
 
-.login_box hr {
+.login_box hr, .payment-method hr{
     width: 100%;
     border: 1px solid #faa41e;
 }
@@ -1224,7 +1225,7 @@ input::placeholder {
     gap: 50px;
 }
 
-.contact_details, .passenger_information {
+.contact_details, .passenger_information, .payment_details {
     display: grid;
     flex-wrap: wrap;
     background-color: #faa41e;
@@ -1233,12 +1234,12 @@ input::placeholder {
     justify-content: space-between;
 }
 
-.contact_details div, .passenger_information div {
+.contact_details div, .passenger_information div, .payment_details div {
     display: flex;
     flex-direction: column;
 }
 
-.contact_details input:not(.two-column), .passenger_information input:not(.two-column) {
+.contact_details input:not(.two-column), .passenger_information input:not(.two-column), .payment_details input:not(.two-column) {
     width: 355px;
 }
 
@@ -1288,7 +1289,7 @@ input::placeholder {
     color: #a10e15;
 }
 
-.contact, .passenger {
+.contact, .passenger, .payment {
     gap: 10px;
     background-color: #a10e15;
     border-radius: 6px;
@@ -1299,10 +1300,84 @@ input::placeholder {
 
 .payment-method {
     width: 300px;
-    height: 500px;
+    height: 295px;
     background-color: #a10e15;
     border-radius: 5px;
     box-shadow: 3px 16px 38px 0px rgba(0,0,0,0.3);
     position: sticky;
     top: 140px;
+    display: flex;
+    flex-direction: column;
+    padding: 5px 2%;
+}
+
+.payment-method h4 {
+    color: white;
+    align-self: center;
+    padding-left: 0px;
+}
+
+.payment-method h5 {
+    font-size: 13px;
+    font-family: "Nunito", sans-serif;
+    color:#faa41e;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+
+#billing_to, #billing_from, #adult_counter, #children_counter {
+    font-size: 18px;
+    color:#d9d9d9;
+}
+
+#payment_title, .travel_details label  {
+    color:#faa41e;
+    font-size: 18px;
+}
+
+.travel_details label {
+    letter-spacing: 1px;
+}
+
+.travel_details {
+    display: grid;
+    grid-template-columns: repeat(2, 100px);
+    justify-items: center;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    gap: 10px;
+}
+
+.travel_details:first-of-type {
+    gap: 3px;
+}
+
+#billing_mode, #mode_label {
+    margin: 0;
+}
+
+#billing_mode {
+    width: 100%;
+}
+
+#exp-mm, #exp-yyyy, #exp input {
+    width: 105px;
+}
+
+#exp {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#exp span {
+    font-size: 35px;
+    color: #a10e15;
+    font-family: "Nunito", sans-serif;
+}
+
+.total {
+    margin: 5px;
 }

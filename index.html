@@ -31,8 +31,8 @@
                     <form class="searchbar" action="ticketreservation.html">
                         <div class="searchbox_results">
                             <div class="to_from">
-                                <input class ="from_municipality" name="municipality" id="from_municipality" placeholder="From" autocomplete="off" onkeyup="showResults(this);" onfocus="showResults(this); showX(this);" onblur="document.getElementById('cit_mun_results').style.display = 'none'; hideX();">
-                                <input name="municipality" id="to_municipality" placeholder="To" autocomplete="off" onkeyup="showResults(this);"  onfocus="showResults(this); showX(this);" onblur="document.getElementById('cit_mun_results').style.display = 'none'; hideX();">
+                                <input required class ="from_municipality" name="municipality" id="from_municipality" placeholder="From" autocomplete="off" onkeyup="showResults(this);" onfocus="showResults(this); showX(this);" onblur="document.getElementById('cit_mun_results').style.display = 'none'; hideX();">
+                                <input required name="municipality" id="to_municipality" placeholder="To" autocomplete="off" onkeyup="showResults(this);"  onfocus="showResults(this); showX(this);" onblur="document.getElementById('cit_mun_results').style.display = 'none'; hideX();">
                             </div>
                             <img src="images/x-mark.svg" class="x-mark left" id="left" onmousedown="clearinput(this, 0);">
                             <img src="images/x-mark.svg" class="x-mark right" id="right" onmousedown="clearinput(this, 1);">
@@ -42,7 +42,7 @@
                             </div>
                         </div>
                         <div class="date_submit">
-                            <input type="text" placeholder="Departing on" onfocus="this.type='date'" onblur="this.type='text'">
+                            <input required type="text" placeholder="Departing on" onfocus="this.type='date'" onblur="this.type='text'">
                             <button type="submit">Search</button>
                         </div>
                     </form>
@@ -150,7 +150,7 @@
                             <li><span>Neque porro quisquam est, qui dolorem ipsum quia dolor sit</span></li>
                         </ul>
 
-                        <button class="passes_buynow_button">Book now</button>
+                        <a href="billing.html"><button class="passes_buynow_button">Book now</button></a>
                     </div>
                 </div>
 
@@ -164,7 +164,7 @@
                             <li><span>Neque porro quisquam est, qui dolorem ipsum quia dolor sit</span></li>
                         </ul>
 
-                        <button class="passes_buynow_button">Book now</button>
+                        <a href="billing.html"><button class="passes_buynow_button">Book now</button></a>
                     </div>
                 </div>
 
@@ -178,7 +178,7 @@
                             <li><span>Neque porro quisquam est, qui dolorem ipsum quia dolor sit</span></li>
                         </ul>
 
-                        <button class="passes_buynow_button">Book now</button>
+                        <a href="billing.html"><button class="passes_buynow_button">Book now</button></a>
                     </div>
                 </div>
 
@@ -245,9 +245,10 @@
                         <div class="footer-col">
                             <div class="footer-col-title">Book</div>
                             <ul class="footer-list">
+                                <li><a href="bookingpage.html">Book A Seat</a></li>
                                 <li><a href="#">Manage Booking</a></li>
-                                <li><a href="#">Seat Sale</a></li>
                                 <li><a href="#">Passenger Account </br>Registration</a></li>
+                                <li><a href="#">Seat Sale</a></li>
                                 <li><a href="#">Bus Status</a></li>
                             </ul>
                         </div>

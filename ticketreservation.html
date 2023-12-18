@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>Book a Ticket | TranSugbo</title>
+        <title>Book a Ticket</title>
         <link rel="icon" type="image/x-icon" href="images/TranSugbo_Icon.svg">
         <link rel="stylesheet" type="text/css" href="style.css">
         <script type = "text/javascript" src="main.js"></script>
@@ -28,8 +28,8 @@
                     <form class="searchbar" action="billing.html">
                         <div class="searchbox_results">
                             <div class="to_from">
-                                <input class ="from_municipality" name="municipality" id="from_municipality" placeholder="From" autocomplete="off" onkeyup="showResults(this);" onfocus="showResults(this); showX(this);" onblur="document.getElementById('cit_mun_results').style.display = 'none'; hideX();">
-                                <input name="municipality" id="to_municipality" placeholder="To" autocomplete="off" onkeyup="showResults(this);"  onfocus="showResults(this); showX(this);" onblur="document.getElementById('cit_mun_results').style.display = 'none'; hideX();">
+                                <input required class ="from_municipality" name="municipality" id="from_municipality" placeholder="From" autocomplete="off" onkeyup="showResults(this);" onfocus="showResults(this); showX(this);" onblur="document.getElementById('cit_mun_results').style.display = 'none'; hideX();">
+                                <input required name="municipality" id="to_municipality" placeholder="To" autocomplete="off" onkeyup="showResults(this);"  onfocus="showResults(this); showX(this);" onblur="document.getElementById('cit_mun_results').style.display = 'none'; hideX();">
                             </div>
                             <img src="images/x-mark.svg" class="x-mark left" id="left" onmousedown="clearinput(this, 0);">
                             <img src="images/x-mark.svg" class="x-mark right" id="right" onmousedown="clearinput(this, 1);">
@@ -38,10 +38,10 @@
     
                             </div>
                         </div>
-                            <input type="text" placeholder="Departing on" onfocus="this.type='date'" onblur="this.type='text'">
+                            <input required type="text" placeholder="Departing on" onfocus="this.type='date'" onblur="this.type='text'">
                             <div class="person_count">
                                 <label for="adult">Adults</label>
-                                <input type="number" name="adult" placeholder="0" min="1">
+                                <input required type="number" name="adult" placeholder="0" min="1">
                             </div>
                             <div class="person_count">
                                 <label for="children">Children</label>
@@ -59,9 +59,10 @@
                             <div class="footer-col">
                                 <div class="footer-col-title">Book</div>
                                 <ul class="footer-list">
+                                    <li><a href="bookingpage.html">Book A Seat</a></li>
                                     <li><a href="#">Manage Booking</a></li>
-                                    <li><a href="#">Seat Sale</a></li>
                                     <li><a href="#">Passenger Account </br>Registration</a></li>
+                                    <li><a href="#">Seat Sale</a></li>
                                     <li><a href="#">Bus Status</a></li>
                                 </ul>
                             </div>

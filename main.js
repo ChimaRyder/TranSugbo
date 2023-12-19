@@ -250,3 +250,109 @@ function moveslider(checkbox) {
         slider.style.left = "-1530px";
     }
 }
+
+
+function saveDataTicket() {
+    from = document.getElementById("from_municipality").value;
+    to = document.getElementById("to_municipality").value;
+    date = document.getElementById("depart_date").value;
+    adult = document.getElementById("adult").value;
+    children = document.getElementById("children").value;
+
+    localStorage.setItem('departure', from);
+    localStorage.setItem('arrival', to);
+    localStorage.setItem('date', date);
+    localStorage.setItem('adult', adult);
+
+    if (children == "") {
+        children = 0;
+    }
+
+    localStorage.setItem('children', children);
+}
+
+function saveDataSearch() {
+    from = document.getElementById("from_municipality").value;
+    to = document.getElementById("to_municipality").value;
+    date = document.getElementById("depart_date").value;
+
+    localStorage.setItem('departure', from);
+    localStorage.setItem('arrival', to);
+    localStorage.setItem('date', date);
+}
+
+function loadData() {
+    from = document.getElementById("from_municipality");
+    to = document.getElementById("to_municipality");
+    date = document.getElementById("depart_date");
+
+    from.value = localStorage.getItem('departure');
+    to.value = localStorage.getItem('arrival');
+    date.value = localStorage.getItem('date');
+}
+
+function loadBilling() {
+    date = document.getElementById("depart_date");
+    adult = document.getElementById("adult_counter");
+    children = document.getElementById("children_counter");
+    childblock = document.getElementsByClassName("child_block");
+    fromdisplay = document.getElementById("billing_from");
+    todisplay = document.getElementById("billing_to");
+
+    fromdisplay.innerHTML = localStorage.getItem('departure');
+    todisplay.innerHTML = localStorage.getItem('arrival');
+    date.innerHTML = localStorage.getItem('date');
+    adult.innerHTML = "x" + localStorage.getItem("adult");
+    children.innerHTML = "x" + localStorage.getItem("children");
+
+    if (localStorage.getItem("children") == 0) {
+        for (let i = 0; i < childblock.length; i++) {
+            childblock[i].style.display = "none";
+        }
+    }
+}
+
+function calcTotal() {
+    mode = document.getElementById("billing_mode");
+    var basefare;
+
+    if (mode.selectedIndex == 0) {
+        basefare = 50;
+    } else {
+        basefare = 35;
+    }
+
+    const childfare = basefare - (basefare * .10);
+
+    adultprice = parseInt(localStorage.getItem("adult")) * basefare;
+    childprice = parseInt(localStorage.getItem("children")) * childfare;
+
+    total = adultprice + childprice;
+
+
+
+    document.getElementById("total").innerHTML = "Total: &#8369 " + total;
+}
+
+function resetForm() {
+    localStorage.clear();
+}
+
+function add(counter, name) {
+    curr = localStorage.getItem(name);
+    curr++;
+    localStorage.setItem(name, curr);
+    counter.innerHTML = "x" + localStorage.getItem(name);
+    calcTotal();
+}
+
+function sub(counter, name) {
+    curr = localStorage.getItem(name);
+    curr--;
+    if (curr < 1) {
+        curr = 1;
+    }
+    localStorage.setItem(name, curr);
+    counter.innerHTML = "x" + localStorage.getItem(name);
+    calcTotal();
+}

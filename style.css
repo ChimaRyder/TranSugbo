@@ -1187,7 +1187,6 @@ input::placeholder {
     background-color: #ffffff00;
     justify-content: space-between;
     align-items: center;
-    justify-content: center;
     max-width: 800px;
     flex-wrap: wrap;
 }
@@ -1300,7 +1299,7 @@ input::placeholder {
 
 .payment-method {
     width: 300px;
-    height: 295px;
+    height: fit-content;
     background-color: #a10e15;
     border-radius: 5px;
     box-shadow: 3px 16px 38px 0px rgba(0,0,0,0.3);
@@ -1380,4 +1379,30 @@ input::placeholder {
 
 .total {
     margin: 5px;
+}
+
+.date {
+    text-align: center;
+}
+
+.travel_details #depart_date {
+    font-size: 15px;
+    color: white;
+}
+
+.counter img {
+    height: 25px;
+    width: 25px;
+    filter: invert(73%) sepia(37%) saturate(2590%) hue-rotate(342deg) brightness(102%) contrast(103%);
+    cursor: pointer;
+    transition: all 0.1s ease;
+}
+
+.counter img:hover {
+    filter: invert(100%) sepia(7%) saturate(28%) hue-rotate(284deg) brightness(107%) contrast(107%);
+}
+
+.counter {
+    display: flex;
+    gap: 5px;
 }

@@ -9,7 +9,7 @@
     <body>
         <div class="index_container">
         <header>
-            <a href="index.html"><img class="logo" src="images/Transugbo-logo-01.svg"></a>
+            <a href="index.html" onclick="resetForm();"><img class="logo" src="images/Transugbo-logo-01.svg"></a>
             <nav>
                 <ul class="nav_links">
                     <li><a href="#">Book</a></li>
@@ -42,8 +42,8 @@
                             </div>
                         </div>
                         <div class="date_submit">
-                            <input required type="text" placeholder="Departing on" onfocus="this.type='date'" onblur="this.type='text'">
-                            <button type="submit">Search</button>
+                            <input required type="text" placeholder="Departing on" onfocus="this.type='date'" onblur="this.type='text'" id="depart_date">
+                            <button type="submit" onclick="saveDataSearch();">Search</button>
                         </div>
                     </form>
             </div>

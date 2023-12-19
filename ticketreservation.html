@@ -5,10 +5,10 @@
         <link rel="stylesheet" type="text/css" href="style.css">
         <script type = "text/javascript" src="main.js"></script>
     </head>
-    <body>
+    <body onload="loadData();">
         <div class="index_container">
             <header>
-                <a href="index.html"><img class="logo" src="images/Transugbo-logo-01.svg"></a>
+                <a href="index.html" onclick="resetForm();"><img class="logo" src="images/Transugbo-logo-01.svg"></a>
                 <nav>
                     <ul class="nav_links">
                         <li><a href="#">Book</a></li>
@@ -38,16 +38,16 @@
     
                             </div>
                         </div>
-                            <input required type="text" placeholder="Departing on" onfocus="this.type='date'" onblur="this.type='text'">
+                            <input required type="text" placeholder="Departing on" onfocus="this.type='date'" onblur="this.type='text'" id="depart_date">
                             <div class="person_count">
                                 <label for="adult">Adults</label>
-                                <input required type="number" name="adult" placeholder="0" min="1">
+                                <input required type="number" name="adult" placeholder="0" min="1" id="adult">
                             </div>
                             <div class="person_count">
                                 <label for="children">Children</label>
-                                <input type="number" name="children" placeholder="0" min="0">
+                                <input type="number" name="children" placeholder="0" min="0" id="children">
                             </div>
-                            <button type="submit">Confirm</button>
+                            <button type="submit" onclick="saveDataTicket();">Confirm</button>
                     </form>
                 </div>
                 

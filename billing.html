@@ -5,10 +5,10 @@
         <link rel="stylesheet" type="text/css" href="style.css">
         <script type = "text/javascript" src="main.js"></script>
     </head>
-    <body>
+    <body onload="loadBilling(); calcTotal();">
         <div class="index_container">
             <header>
-                <a href="index.html"><img class="logo" src="images/Transugbo-logo-01.svg"></a>
+                <a href="index.html" onclick="resetForm();"><img class="logo" src="images/Transugbo-logo-01.svg"></a>
                 <nav>
                     <ul class="nav_links">
                         <li><a href="#">Book</a></li>
@@ -538,18 +538,28 @@
                     <div class="travel_details">
                         <h5>Departure</h5>
                         <h5>Arrival</h5>
-                        <h5 id="billing_from">Cebu City</h5>
-                        <h5 id="billing_to">Naga City</h5>
+                        <h5 id="billing_from">------</h5>
+                        <h5 id="billing_to">------</h5>
+                        <h5 class="two-column date">Departure Date</h5>
+                        <h5 id="depart_date" class="two-column date depart_date">-------</h5>
                     </div>
                     <hr>
                     <div class="travel_details">
 
                         <h5 id="payment_title">Adult</h5>
-                        <h5 id="adult_counter">x1</h5>
-                        <h5 id="payment_title">Children</h5>
-                        <h5 id="children_counter">x1</h5>
+                        <div class="counter">
+                            <img onclick="add(document.getElementById('adult_counter'), localStorage.key(2));" src="images/add.png">
+                            <h5 id="adult_counter">x</h5>
+                            <img onclick="sub(document.getElementById('adult_counter'), localStorage.key(2));" src="images/delete.png">
+                        </div>
+                        <h5 id="payment_title" class="child_block">Children</h5>
+                        <div class="counter child_block">
+                            <img onclick="add(document.getElementById('children_counter'), localStorage.key(0));" src="images/add.png">
+                            <h5 id="children_counter">x</h5>
+                            <img onclick="sub(document.getElementById('children_counter'), localStorage.key(0));" src="images/delete.png">
+                        </div>
                         <label for="mode" id="mode_label">Mode</label>
-                        <select name="mode" id="billing_mode" required>
+                        <select onchange="calcTotal();" name="mode" id="billing_mode" required>
                             <option value="train">Train</option>
                             <option value="bus">Bus</option>
                         </select>
@@ -557,7 +567,7 @@
 
                     <hr>
                     
-                    <h4 class="total">Total: P500</h4>
+                    <h4 class="total" id="total">Total: -----</h4>
 
                 </div>
             </div>

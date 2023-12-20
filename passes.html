@@ -1,11 +1,11 @@
 <html>
     <head>
-        <title>Passes and Reservations</title>
+        <title>Passes</title>
         <link rel="icon" type="image/x-icon" href="images/TranSugbo_Icon.svg">
         <link rel="stylesheet" type="text/css" href="style.css">
         <script type = "text/javascript" src="main.js"></script>
     </head>
-    <body>
+    <body onload="resetForm();">
         <div class="index_container">
             <header>
                 <a href="index.html" onclick="resetForm();"><img class="logo" src="images/Transugbo-logo-01.svg"></a>
@@ -53,7 +53,7 @@
                                 <li><a href="#">Careers</a></li>
                                 <hr>
                                 <li><a href="#">Contact Us</a></li>
-                                <hr>
+                                    <hr>
                                 <li><a href="news.html">News</a></li>
                             </ul>
                         </li>
@@ -64,11 +64,52 @@
                 </div>
             </header>
 
-            <div class="passes_or_tickets">
-                <div class="choicebox">
-                    <h2>Passes and Reservations</h2>
-                    <a href="passes.html"><button>Purchase a Pass</button></a>
-                    <a href="ticketreservation.html"><button>Book a Ticket</button></a>
+            <div class="passespage_container">
+                <div class="passespage_header">
+                    <h4>Travel with the TranSugbo Pass</h4>
+                    <h5>Explore with ease while spending less!</h5>
+                </div>
+                <div class="passespage_content">
+                    
+                    <div class="passes_description kasag">
+                        <img src="images/kasag.svg">
+                        <div class="passes_details">
+                            <div class="passes_title">KASAG PASS <h4>&#8369 299.00</h4></div>
+                            <ul class="passes_list">
+                                <li><span>7 days of unlimited bus travel</span></li>
+                                <li><span>Up to 100 hours of travel on the Red Line and Yellow Line</span></li>
+                                <li><span>Exclusive offers and discounts at our stations</span></li>
+                            </ul>
+                            <button type="submit" onclick="switchtoPasses();">Book Now</button>
+                        </div>
+                    </div>
+
+                    <div class="passes_description kugita">
+                        
+                        <div class="passes_details">
+                            <div class="passes_title">KUGITA PASS <h4>&#8369 599.00</h4></div>
+                            <ul class="passes_list">
+                                <li><span>14 days of unlimited bus travel</span></li>
+                                <li><span>Unlimited rides on the Red Line, Yellow Line, and Blue Line</span></li>
+                                <li><span>Exclusive offers and discounts at our stations</span></li>
+                            </ul>
+                            <button type="submit" onclick="switchtoPasses();">Book Now</button>
+                        </div>
+                        <img src="images/octopus.svg">
+                    </div>
+
+                    <div class="passes_description tuyom">
+                        <img src="images/sea-urchin.svg">
+                        <div class="passes_details">
+                            <div class="passes_title">TUYOM PASS <h4>&#8369 999.00</h4></div>
+                            <ul class="passes_list">
+                                <li><span>21 days of unlimited bus travel</span></li>
+                                <li><span>Unlimited rides on the Red Line, Yellow Line, and Blue Line</span></li>
+                                <li><span>Exclusive offers and discounts at our stations</span></li>
+                            </ul>
+                            <button type="submit" onclick="switchtoPasses();">Book Now</button>
+                        </div>
+                    </div>
                 </div>
             </div>
 

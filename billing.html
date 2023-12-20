@@ -5,16 +5,58 @@
         <link rel="stylesheet" type="text/css" href="style.css">
         <script type = "text/javascript" src="main.js"></script>
     </head>
-    <body onload="loadBilling(); calcTotal();">
+    <body id="billing_body" onload="loadBilling(); calcTotal(); checkPasses();">
         <div class="index_container">
             <header>
                 <a href="index.html" onclick="resetForm();"><img class="logo" src="images/Transugbo-logo-01.svg"></a>
                 <nav>
                     <ul class="nav_links">
-                        <li><a href="#">Book</a></li>
-                        <li><a href="#">Deals</a></li>
-                        <li><a href="#">Map</a></li>
-                        <li><a href="#">About</a></li>
+                        <li>
+                            <a href="#">Book</a>
+                            <ul class="dropdown">
+                                <li><a href="bookingpage.html">Book A Seat</a></li>
+                                <hr>
+                                <li><a href="#">Manage Booking</a></li>
+                                <hr>
+                                <li><a href="#">Passenger Account Registration</a></li>
+                                <hr>
+                                <li><a href="#">Seat Sale</a></li>
+                                <hr>
+                                <li><a href="#">Bus Status</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">Deals</a>
+                            <ul class="dropdown">
+                                <li><a href="passes.html">Passes</a></li>
+                                <hr>
+                                <li><a href="#">Promos</a></li>
+                                <hr>
+                                <li><a href="#">Discounts & Vouchers</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">Map</a>
+                            <ul class="dropdown">
+                                <li><a href="#">Explore</a></li>
+                                <hr>
+                                <li><a href="#">Guides</a></li>
+                                <hr>
+                                <li><a href="#">Routes</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#">About</a>
+                            <ul class="dropdown">
+                                <li><a href="about.html">Our Story</a></li>
+                                <hr>
+                                <li><a href="#">Careers</a></li>
+                                <hr>
+                                <li><a href="#">Contact Us</a></li>
+                                <hr>
+                                <li><a href="news.html">News</a></li>
+                            </ul>
+                        </li>
                     </ul>    
                 </nav>
                 <div class="userLogIn">
@@ -26,7 +68,7 @@
                 <div class="details">
                     <div class="contact">
                         <h3>Contact Details</h3>
-                        <form class="contact_details">
+                        <form class="contact_details" id="contact_details" method="get" onsubmit="event.preventDefault();">
                             <div class="two-column">
                                 <label for="title">Title</label>
                                 <select name="title" required>
@@ -252,14 +294,10 @@
                     </div>
                     <div class="passenger">
                         <h3>Passenger Information</h3>
-                        <form class="passenger_information">
-                            <h4 class="two-column">Passenger Information 1</h4>
-                            <div class="two-column">
-                                <select name="adult_child" required>
-                                    <option>Adult</option>
-                                    <option>Child (4 - 12 years old)</option>
-                                </select>
-                            </div>
+                        <form class="passenger_information" id="passenger_information" method="get" onsubmit="event.preventDefault();">
+
+                        </form>
+                        <div id="form_data">
                             <div>
                                 <label for="first_name">First Name</label>
                                 <input type="text" name="first_name" required>
@@ -477,11 +515,11 @@
                                     <option value="zimbabwean">Zimbabwean</option>
                                 </select>
                             </div>
-                        </form>
+                        </div>
                     </div>
                     <div class="payment">
                         <h3>Payment Details</h3>
-                        <form class="payment_details">
+                        <form class="payment_details" id="payment_details" method="get" action="index.html">
                             <label for="payment_mode" id="payment_mode">Mode of Payment</label>
                             <select name="payment_mode" class="two-column" required>
                                 <option value="visa">Visa</option>
@@ -526,21 +564,20 @@
                                 </select>
                                 <input name="cvv" placeholder="CVV" maxlength="4" inputmode="numeric">
                             </div>
-
                         </form>
                     </div>
                 </div>
                 <div class="payment-method">
-                    <h4>Transaction Details</h4>
+                    <h4>Travel Details</h4>
 
                     <hr>
 
                     <div class="travel_details">
-                        <h5>Departure</h5>
-                        <h5>Arrival</h5>
+                        <h5 id="departlabel">Departure</h5>
+                        <h5 id="arrivelabel">Arrival</h5>
                         <h5 id="billing_from">------</h5>
                         <h5 id="billing_to">------</h5>
-                        <h5 class="two-column date">Departure Date</h5>
+                        <h5 id="datelabel" class="two-column date">Departure Date</h5>
                         <h5 id="depart_date" class="two-column date depart_date">-------</h5>
                     </div>
                     <hr>
@@ -568,7 +605,7 @@
                     <hr>
                     
                     <h4 class="total" id="total">Total: -----</h4>
-
+                    <button id="book-ticket" onclick="submitBilling();" type="button">Book Ticket</button>
                 </div>
             </div>
 
@@ -589,7 +626,7 @@
                             <div class="footer-col">
                                 <div class="footer-col-title">Deals</div>
                                 <ul class="footer-list">
-                                    <li><a href="#">Passes</a></li>
+                                    <li><a href="passes.html">Passes</a></li>
                                     <li><a href="#">Promos</a></li>
                                     <li><a href="#">Discounts </br>& Vouchers</a></li>
                                 </ul>
@@ -605,18 +642,19 @@
                             <div class="footer-col">
                                 <div class="footer-col-title">About</div>
                                 <ul class="footer-list">
-                                    <li><a href="#">Our Story</a></li>
+                                    <li><a href="about.html">Our Story</a></li>
                                     <li><a href="#">Careers</a></li>
                                     <li><a href="#">Contact Us</a></li>
+                                    <li><a href="news.html">News</a></li>
                                 </ul>
                             </div>
                             <div class="socmed">
                                 <div class="socmed-title">CONNECT WITH US</div>
                                 <div class="socmed-links">
-                                    <a href="#"><img src="images/facebook.svg"/></a>
-                                    <a href="#"><img src="images/twitter.svg"/></a>
-                                    <a href="#"><img src="images/instagram.svg"/></a>
-                                    <a href="#"><img src="images/play.svg"/></a>
+                                    <a href="http://facbook.com/TranSugbo"><img src="images/facebook.svg"/></a>
+                                    <a href="http://twitter.com/OfficialTranSugbo"><img src="images/twitter.svg"/></a>
+                                    <a href="http://instagram.com/officialtransugbo"><img src="images/instagram.svg"/></a>
+                                    <a href="http://youtube.com/@OfficialTranSugbo"><img src="images/play.svg"/></a>
                                 </div>
                             </div>
                         </div>
@@ -644,8 +682,8 @@
                         <div class="download-app">
                             <div class="app-title">DOWNLOAD THE APP</div>
                             <div class="googleplay-applestore">
-                                <a href="#"><img id="google" src="images/Google_Play_Store_badge_EN.svg"/></a>
-                                <a href="#"><img id="apple" src="images/Download_on_the_App_Store_Badge.svg"/></a>
+                                <a href="https://play.google.com/store/apps/details?id=com.transugboinc.transugbo"><img id="google" src="images/Google_Play_Store_badge_EN.svg"/></a>
+                                <a href="http://apps.apple.com/ph/app/transugbo/id26465947"><img id="apple" src="images/Download_on_the_App_Store_Badge.svg"/></a>
                             </div>
                         </div>
                     </div>

@@ -12,10 +12,51 @@
             <a href="index.html" onclick="resetForm();"><img class="logo" src="images/Transugbo-logo-01.svg"></a>
             <nav>
                 <ul class="nav_links">
-                    <li><a href="#">Book</a></li>
-                    <li><a href="#">Deals</a></li>
-                    <li><a href="#">Map</a></li>
-                    <li><a href="#">About</a></li>
+                    <li>
+                        <a href="#">Book</a>
+                        <ul class="dropdown">
+                            <li><a href="bookingpage.html">Book A Seat</a></li>
+                            <hr>
+                            <li><a href="#">Manage Booking</a></li>
+                            <hr>
+                            <li><a href="#">Passenger Account Registration</a></li>
+                            <hr>
+                            <li><a href="#">Seat Sale</a></li>
+                            <hr>
+                            <li><a href="#">Bus Status</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Deals</a>
+                        <ul class="dropdown">
+                            <li><a href="passes.html">Passes</a></li>
+                            <hr>
+                            <li><a href="#">Promos</a></li>
+                            <hr>
+                            <li><a href="#">Discounts & Vouchers</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Map</a>
+                        <ul class="dropdown">
+                            <li><a href="#">Explore</a></li>
+                            <hr>
+                            <li><a href="#">Guides</a></li>
+                            <hr>
+                            <li><a href="#">Routes</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">About</a>
+                        <ul class="dropdown">
+                            <li><a href="about.html">Our Story</a></li>
+                            <hr>
+                            <li><a href="#">Careers</a></li>
+                            <hr>
+                            <li><a href="#">Contact Us</a></li>
+                                    <li><a href="news.html">News</a></li>
+                        </ul>
+                    </li>
                 </ul>    
             </nav>
             <div class="userLogIn">
@@ -72,9 +113,9 @@
                 </div>
 
                 <div class="about_article">
-                    <h1 class="about_headline">Lorem ipsum dolor sit amet, consectetur adipiscing</h1>
+                    <h1 class="about_headline">Explore Cebu like you've never before</h1>
                     <div class="about_paragraph">
-                        <p >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        <p >Here at TranSugbo, we provide world-class transportation to the common Filipino. Whether it's by our state-of-the-art BRT-ready buses, or with the country's first monorail, we are sure to bring you the best in comfort and relaxation as you travel across the province of Cebu. From hiking to the mountains of Osmeña Peak, to swimming with the whale sharks in Oslob, traveling has never been easier than with TranSugbo.</p>
                     </div>
                 </div>
             </div>
@@ -85,7 +126,7 @@
                 <div class="guides_header">
                     <div class="title">GUIDES</div>
                     <div class="line"><div class="diamond"></div></div>
-                    <div class="title_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+                    <div class="title_description">Learn the ins and outs of Cebu as you travel</div>
                 </div>
                 <div class="guides_button">
                 <div class="guides_boxes">
@@ -136,7 +177,7 @@
             <div class="passes_header">
                 <div class="title">TRANSUGBO PASS</div>
                 <div class="line"><div class="diamond"></div></div>
-                <div class="title_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+                <div class="title_description">Explore with ease while spending less!</div>
             </div>
 
             <div class="passes_section">
@@ -145,12 +186,12 @@
                     <div class="passes_details">
                         <div class="passes_title">KASAG PASS</div>
                         <ul class="passes_list">
-                            <li><span>Sed ut perspiciatis unde omnis iste natus error sit</span></li>
-                            <li><span>Nemo enim ipsam voluptatem quia voluptas sit aspernatur</span></li>
-                            <li><span>Neque porro quisquam est, qui dolorem ipsum quia dolor sit</span></li>
+                            <li><span>7 days of unlimited bus travel</span></li>
+                            <li><span>Up to 100 hours of travel on the Red Line and Yellow Line</span></li>
+                            <li><span>Exclusive offers and discounts at our stations</span></li>
                         </ul>
 
-                        <a href="billing.html"><button class="passes_buynow_button">Book now</button></a>
+                        <a href="bookingpage.html"><button class="passes_buynow_button">Book now</button></a>
                     </div>
                 </div>
 
@@ -159,12 +200,12 @@
                     <div class="passes_details">
                         <div class="passes_title">KUGITA PASS</div>
                         <ul class="passes_list">
-                            <li><span>Sed ut perspiciatis unde omnis iste natus error sit</span></li>
-                            <li><span>Nemo enim ipsam voluptatem quia voluptas sit aspernatur</span></li>
-                            <li><span>Neque porro quisquam est, qui dolorem ipsum quia dolor sit</span></li>
+                            <li><span>14 days of unlimited bus travel</span></li>
+                            <li><span>Unlimited rides on the Red Line, Yellow Line, and Blue Line</span></li>
+                            <li><span>Exclusive offers and discounts at our stations</span></li>
                         </ul>
 
-                        <a href="billing.html"><button class="passes_buynow_button">Book now</button></a>
+                        <a href="bookingpage.html"><button class="passes_buynow_button">Book now</button></a>
                     </div>
                 </div>
 
@@ -173,12 +214,12 @@
                     <div class="passes_details">
                         <div class="passes_title">TUYOM PASS</div>
                         <ul class="passes_list">
-                            <li><span>Sed ut perspiciatis unde omnis iste natus error sit</span></li>
-                            <li><span>Nemo enim ipsam voluptatem quia voluptas sit aspernatur</span></li>
-                            <li><span>Neque porro quisquam est, qui dolorem ipsum quia dolor sit</span></li>
+                            <li><span>21 days of unlimited bus travel</span></li>
+                            <li><span>Unlimited rides on the Red Line, Yellow Line, and Blue Line</span></li>
+                            <li><span>Exclusive offers and discounts at our stations</span></li>
                         </ul>
 
-                        <a href="billing.html"><button class="passes_buynow_button">Book now</button></a>
+                        <a href="bookingpage.html"><button class="passes_buynow_button">Book now</button></a>
                     </div>
                 </div>
 
@@ -197,29 +238,29 @@
             <div class="news_stories_container">
                 <div class="title">News Stories</div>
             <div class="mainarticle_container">
-                <div class="mainarticle_image">
+                <div class="mainarticle_image aloguinsan">
                 </div>
                 <div class="mainarticle_description">
-                    <h2 class="mainarticle_title">Quis autem vel eum iure reprehenderit</h2>
+                    <h2 class="mainarticle_title">2023 Guide to Experiencing the Wonders of Aloguinsan</h2>
                     <div class="mainarticle_article">
-                        <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.</p>
+                        <p>There’s no time to be bored in a place as beautiful as Aloguinsan. Far away from the city buzz is the quaint municipality of Aloguinsan. This coastal town boasts a captivating blend of natural wonders, cultural heritage, and community-based eco-tourism initiatives.</p>
                     </div>
-                    <a class="read-more" href="#">Read More >></a>
+                    <a class="read-more" href="news.html">Read More >></a>
                 </div>
             </div>
 
             <div class="bottom_stories">
                 <div class="story_block">
-                    <div class="block_image"></div>
-                    <div class="block_title">Itaque earum rerum hic tenetur a sapiente delectus...</div>
+                    <div class="block_image bantayan"></div>
+                    <div class="block_title">2023 Ultimate Travel Guide to Bantayan Islan...</div>
                 </div>
                 <div class="story_block">
-                    <div class="block_image"></div>
-                    <div class="block_title">Et harum quidem rerum facilis est et expedita distinctio...</div>
+                    <div class="block_image moalboal"></div>
+                    <div class="block_title">Beach stay for P500 per night at this resort in Pan...</div>
                 </div>
                 <div class="story_block">
-                    <div class="block_image"></div>
-                    <div class="block_title">Temporibus autem quibusdam et aut officiis debitis...</div>
+                    <div class="block_image alegria"></div>
+                    <div class="block_title">5 Must-Visit Spots in Alegria</div>
                 </div>
             </div>
             </div>
@@ -229,7 +270,7 @@
             <div class="newsletter_container">
                 <div class="newsletter_header">
                     <div class="title">Subscribe to our Newsletter!</div>
-                    <div class="newsletter-subtext">Lorem ipsum dolor sit amet, consectetur adipiscing elit</div>
+                    <div class="newsletter-subtext">See exclusive offers, sales, and discounts first from us!</div>
                 </div>
 
                 <form class="email_form">
@@ -255,7 +296,7 @@
                         <div class="footer-col">
                             <div class="footer-col-title">Deals</div>
                             <ul class="footer-list">
-                                <li><a href="#">Passes</a></li>
+                                <li><a href="passes.html">Passes</a></li>
                                 <li><a href="#">Promos</a></li>
                                 <li><a href="#">Discounts </br>& Vouchers</a></li>
                             </ul>
@@ -271,18 +312,19 @@
                         <div class="footer-col">
                             <div class="footer-col-title">About</div>
                             <ul class="footer-list">
-                                <li><a href="#">Our Story</a></li>
+                                <li><a href="about.html">Our Story</a></li>
                                 <li><a href="#">Careers</a></li>
                                 <li><a href="#">Contact Us</a></li>
+                                <li><a href="news.html">News</a></li>
                             </ul>
                         </div>
                         <div class="socmed">
                             <div class="socmed-title">CONNECT WITH US</div>
                             <div class="socmed-links">
-                                <a href="#"><img src="images/facebook.svg"/></a>
-                                <a href="#"><img src="images/twitter.svg"/></a>
-                                <a href="#"><img src="images/instagram.svg"/></a>
-                                <a href="#"><img src="images/play.svg"/></a>
+                                <a href="http://facbook.com/TranSugbo"><img src="images/facebook.svg"/></a>
+                                <a href="http://twitter.com/OfficialTranSugbo"><img src="images/twitter.svg"/></a>
+                                <a href="http://instagram.com/officialtransugbo"><img src="images/instagram.svg"/></a>
+                                <a href="http://youtube.com/@OfficialTranSugbo"><img src="images/play.svg"/></a>
                             </div>
                         </div>
                     </div>
@@ -310,8 +352,8 @@
                     <div class="download-app">
                         <div class="app-title">DOWNLOAD THE APP</div>
                         <div class="googleplay-applestore">
-                            <a href="#"><img id="google" src="images/Google_Play_Store_badge_EN.svg"/></a>
-                            <a href="#"><img id="apple" src="images/Download_on_the_App_Store_Badge.svg"/></a>
+                            <a href="https://play.google.com/store/apps/details?id=com.transugboinc.transugbo"><img id="google" src="images/Google_Play_Store_badge_EN.svg"/></a>
+                            <a href="http://apps.apple.com/ph/app/transugbo/id26465947"><img id="apple" src="images/Download_on_the_App_Store_Badge.svg"/></a>
                         </div>
                     </div>
                 </div>

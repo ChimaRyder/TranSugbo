@@ -292,6 +292,10 @@ function loadData() {
 }
 
 function loadBilling() {
+    if (localStorage.length == 0) {
+        window.location.replace("ticketreservation.html");
+    }
+
     date = document.getElementById("depart_date");
     adult = document.getElementById("adult_counter");
     children = document.getElementById("children_counter");
@@ -310,6 +314,8 @@ function loadBilling() {
             childblock[i].style.display = "none";
         }
     }
+
+    passengerList();
 }
 
 function calcTotal() {
@@ -320,6 +326,10 @@ function calcTotal() {
         basefare = 50;
     } else {
         basefare = 35;
+    }
+
+    if (localStorage.getItem('pass')){
+        basefare = 299;
     }
 
     const childfare = basefare - (basefare * .10);
@@ -343,6 +353,7 @@ function add(counter, name) {
     curr++;
     localStorage.setItem(name, curr);
     counter.innerHTML = "x" + localStorage.getItem(name);
+    passengerList();
     calcTotal();
 }
 
@@ -354,5 +365,69 @@ function sub(counter, name) {
     }
     localStorage.setItem(name, curr);
     counter.innerHTML = "x" + localStorage.getItem(name);
+    prompt
+    passengerList();
     calcTotal();
 }
+
+function passengerList() {
+    adult = localStorage.getItem('adult');
+    children = localStorage.getItem('children');
+    const form = document.getElementById("passenger_information");
+    formData = document.getElementById("form_data").innerHTML;
+    form.innerHTML = "";
+    var newForm = "";
+    const adultType = "<div class='two-column'><select name='adult_child' required><option selected>Adult</option><option>Child (4 - 12 years old)</option></select></div>";
+    const childType = "<div class='two-column'><select name='adult_child' required><option>Adult</option><option selected>Child (4 - 12 years old)</option></select></div>";
+     
+    for (let i = 0; i < adult; i++) {
+        title = "<h4 class='two-column'> Adult " + (i+1) + "</h4>";
+        newForm += title + adultType + formData;
+    }
+
+    for (let i = 0; i < children; i++) {
+        title = "<h4 class='two-column'> Child " + (i+1) + "</h4>";
+        newForm += title + childType + formData;
+    }
+
+    form.innerHTML = newForm;
+}
+
+function submitBilling() {
+    document.getElementById("payment_details").requestSubmit();
+    document.getElementById("passenger_information").requestSubmit();
+    document.getElementById("contact_details").requestSubmit();
+}
+
+function canSubmit(event) {
+    if (!localStorage.getItem('adult')){
+        event.preventDefault();
+    } else {
+        if(!localStorage.getItem('children')){
+            localStorage.setItem('children', 0);
+        }
+    }
+}
+
+function switchtoPasses() {
+    localStorage.setItem('pass', 1);
+    localStorage.setItem('adult', 1);
+    localStorage.setItem('children', 0);
+    window.location.href = "billing.html";
+}
+
+function checkPasses() {
+    if (localStorage.getItem('pass')){
+        tolabel = document.getElementById("arrivelabel");
+        fromlabel = document.getElementById("departlabel");
+        datelabel = document.getElementById("datelabel");
+        modelabel = document.getElementById("mode_label");
+        modedisplay = document.getElementById("billing_mode");
+
+        modelabel.style.display = "none";
+        modedisplay.style.display = "none";
+        tolabel.style.display = "none";
+        datelabel.style.display = "none";
+        fromlabel.style.display = "none";
+        }
+ }

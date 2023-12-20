@@ -1,0 +1,54 @@
+body * {
+    font-family: "Nunito", sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 10%;
+    align-items: center;
+    gap: 50px;
+}
+
+.profile_title * {
+    text-align: center;
+}
+
+.profile_content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.profile_content p {
+    line-height: 25px;
+}
+
+.profile_image {
+    height: 400px;
+    width: 400px;
+    background-image: url(./images/Frenz.jpg);
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 1200px;
+    box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.29);
+}
+
+.profile_about, .profile_details {
+    width: 500px;
+    padding: 0px 5%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.profile_details h5 {
+    font-weight: 200;
+    font-size: 15px;
+}
+
+.profile_details .socmed-links {
+    filter: invert(61%) sepia(30%) saturate(7321%) hue-rotate(159deg) brightness(91%) contrast(101%);
+}

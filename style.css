@@ -51,10 +51,12 @@ header {
 .nav_links li {
     display: inline-block;
     padding: 0px 30px;
+    position: relative;
 }
 
 .nav_links li a {
     transition: all 0.3s ease 0s;
+    z-index: 1;
     position: relative;
 
 }
@@ -75,9 +77,37 @@ header {
     color:#faa41e;
 }
 
+.nav_links li a:hover ~ ul.dropdown {
+    display: flex;
+}
+
 .nav_links li a:hover:after {
     transform: scale(1, 1);
     width: 100%;
+}
+
+ul.dropdown {
+    width: 270px;
+    position: absolute;
+    top: 25px;
+    left: 0px;
+    background-color: #a10e15;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    padding-top: 50px;
+    gap: 20px;
+    display: none;
+}
+
+ul.dropdown:hover {
+    display: flex;
+}
+
+ul.dropdown hr {
+    border: 1px solid #faa41e;
+    margin: 0px 20px;
 }
 
 .home_searchbar {
@@ -278,7 +308,7 @@ input::placeholder {
     outline: none;
 }
 
-.searchbar button, .guide_button, .guides_seemore_button, .passes_buynow_button, .email_form button, .loginform button, .choicebox button{
+.passespage_container button, .searchbar button, .guide_button, .guides_seemore_button, .passes_buynow_button, .email_form button, .loginform button, .choicebox button, .payment-method button{
     height: 50px;
     width: 190px;
     background-color: #faa41e;
@@ -299,7 +329,7 @@ input::placeholder {
     height: 40px;
 }
 
-.searchbar button:hover, .guide_button:hover, .guides_seemore_button:hover, .passes_buynow_button:hover, .email_form button:hover, .loginform button:hover, .choicebox button:hover{
+.passespage_container button:hover, .searchbar button:hover, .guide_button:hover, .guides_seemore_button:hover, .passes_buynow_button:hover, .email_form button:hover, .loginform button:hover, .choicebox button:hover, .payment-method button:hover{
     -webkit-box-shadow: 2px 11px 9px 0px rgba(0,0,0,0.14); 
     box-shadow: 2px 11px 9px 0px rgba(0,0,0,0.14);
 }
@@ -751,6 +781,8 @@ input::placeholder {
     float: left;
     -webkit-border-radius: 15px 15px 15px 15px;
     border-radius: 15px 15px 15px 15px;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .mainarticle_description {
@@ -800,6 +832,7 @@ input::placeholder {
     display:flex;
     flex-direction: column;
     cursor: pointer;
+    width: 350px;
 }
 
 .block_image {
@@ -809,6 +842,8 @@ input::placeholder {
     float: left;
     -webkit-border-radius: 15px 15px 15px 15px;
     border-radius: 15px 15px 15px 15px;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .block_title {
@@ -1307,13 +1342,13 @@ input::placeholder {
     top: 140px;
     display: flex;
     flex-direction: column;
-    padding: 5px 2%;
+    padding: 15px 2%;
 }
 
 .payment-method h4 {
     color: white;
     align-self: center;
-    padding-left: 0px;
+    padding: 5px;
 }
 
 .payment-method h5 {
@@ -1379,6 +1414,7 @@ input::placeholder {
 
 .total {
     margin: 5px;
+    text-align: center;
 }
 
 .date {
@@ -1405,4 +1441,206 @@ input::placeholder {
 .counter {
     display: flex;
     gap: 5px;
+}
+
+.payment-method button {
+    margin: 0px;
+    height: 40px;
+    align-self: center;
+}
+
+#form_data {
+    display: none;
+}
+
+.passespage_header, .about_page_header {
+   height: 350px;
+   overflow: hidden;
+   background-image: url(./images/passes_header_bg.jpg);
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: 0px -80px;
+   position: relative;
+}
+
+.passespage_header h4, .passespage_header h5, .about_page_header h4, .about_page_header h5 {
+    font-family: "Nunito", sans-serif;
+    font-size: 50px;
+    color: white;
+    text-shadow: 0px 4px 2px rgba(0,0,0,0.4);
+    position: absolute;
+    right: 10%;
+    top: 70%;
+}
+
+.passespage_header h5, .about_page_header h5 {
+    top: 87%;
+    font-size: 18px;
+}
+
+.passespage_content {
+    padding: 20px 12%;
+}
+
+.passespage_content .passes_description {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px;
+}
+
+.passespage_content .passes_description {
+    background-color: #a10e15;
+    border-radius: 10px;
+    box-shadow: 0px 9px 21px 3px rgba(0,0,0,0.4);
+}
+
+.passespage_content .passes_description img {
+    margin: 25px;
+}
+
+.passes_details h4 {
+    font-family: "Nunito", sans-serif;
+    font-size: 20px;
+    color: white;
+    position: absolute;
+    left: 27%;
+    top: 59px;
+
+}
+
+.passespage_content .passes_details .passes_title {
+    position: relative;
+}
+
+.about_page_header {
+    background-image: url(./images/guidephoto_cebucity.jpg);
+    background-position: 0px -200px;
+}
+
+.about_content {
+    padding: 20px 15%;
+    gap: 20px;
+}
+
+.about_content * {
+    font-family: "Nunito", sans-serif;
+    font-size: 18px;
+    text-align: justify;
+}
+
+.about_content p {
+    padding: 10px 0px;
+    line-height: 35px;
+}
+
+.about_founders {
+    height: 300px;
+    width: 300px;
+    overflow: hidden;
+    margin: 10px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.about_founders:first-of-type {
+    float: left;
+}
+
+.about_founders img {
+    width: 300px;
+}
+
+.about_content h4 {
+    text-align: center;
+}
+
+.co-founders {
+    display: flex;
+    justify-content: center;
+}
+
+.co-founders span {
+    position: absolute;
+    left: 30px;
+    top: 260px;
+    color: white;
+    font-weight: 700;
+    text-shadow: 0px 4px 2px rgba(0,0,0,0.4);
+}
+
+.news_page {
+    padding: 20px 15%;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.news_block {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.news_image {
+    height: 300px;
+    width: 80%;
+    background-color: #a10e15;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.aloguinsan {
+    background-image: url(./images/aloguinsan.jpg);
+}
+
+.moalboal {
+    background-image: url(./images/moalboal.jpg);
+}
+
+.bantayan {
+    background-image: url(./images/daanbantayan.jpg);
+}
+
+.alegria {
+    background-image: url(./images/alegria.jpg);
+}
+
+.news_description {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100%;
+}
+
+.news_description * {
+    font-family: "Nunito", sans-serif;
+    font-size: 20px;
+}
+
+.news_description p {
+    text-align: justify;
+}
+
+.news_description h4 {
+    font-size: 30px;
+}
+
+.news_description a {
+    color: #faa41e;
+}
+
+.news_page hr {
+    border: 2px solid #faa41e;
+    border-radius: 15px;
+}
+
+.about_content a {
+    color:#faa41e;
+    text-decoration: underline;
 }
